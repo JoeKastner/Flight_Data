@@ -5,7 +5,7 @@ import psycopg2
 from sqlalchemy import create_engine
 
 #%% Create connection to PostgreSQL database
-engine = create_engine('postgresql+psycopg2://joek318:wolphin85@mydbinstance.c39czh0r7sit.us-east-2.rds.amazonaws.com/joek318')
+engine = create_engine('postgresql+psycopg2://{USERNAME}:{PASSWORD}@mydbinstance.c39czh0r7sit.us-east-2.rds.amazonaws.com/{USERNAME}')
 
 #%% Download airport data and create dataframe
 airport = pd.read_csv('https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat',header=-1)
